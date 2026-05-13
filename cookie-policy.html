@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Policy — Italian Street Pasta</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --deep: #111111;
+    --card: #161616;
+    --border: #2a2a2a;
+    --red: #c0392b;
+    --orange: #e05a1e;
+    --gold: #c9a96e;
+    --cream: #f5efe6;
+    --text: #d4ccc4;
+    --muted: #7a7068;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+  }
+  .topbar {
+    padding: 18px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--deep);
+  }
+  .topbar a {
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .topbar a:hover { color: var(--cream); }
+  .topbar-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--cream);
+    letter-spacing: 2px;
+  }
+  .topbar-brand em { color: var(--orange); font-style: italic; }
+  .legal-hero {
+    text-align: center;
+    padding: 90px 24px 50px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .legal-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(224,90,30,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .legal-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .legal-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 6vw, 64px);
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+  }
+  .legal-hero h1 em { font-style: italic; color: var(--orange); }
+  .legal-meta {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 70px 24px 100px;
+  }
+  .legal-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--cream);
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: 0.3px;
+  }
+  .legal-content h2:first-of-type { margin-top: 0; }
+  .legal-content p {
+    font-size: 13.5px;
+    color: var(--text);
+    line-height: 1.85;
+    margin-bottom: 16px;
+    letter-spacing: 0.2px;
+  }
+  .legal-content ul {
+    margin: 0 0 20px 24px;
+    color: var(--text);
+  }
+  .legal-content li {
+    font-size: 13.5px;
+    line-height: 1.85;
+    margin-bottom: 8px;
+    letter-spacing: 0.2px;
+  }
+  .legal-content li::marker { color: var(--orange); }
+  .legal-content a {
+    color: var(--orange);
+    text-decoration: underline;
+    text-decoration-color: rgba(224,90,30,0.4);
+    text-underline-offset: 3px;
+  }
+  .legal-content a:hover { color: var(--cream); }
+  .legal-content strong { color: var(--cream); font-weight: 600; }
+
+  /* Cookie table */
+  .cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 32px;
+    font-size: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .cookie-table th {
+    background: var(--deep);
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    border-bottom: 1px solid var(--border);
+  }
+  .cookie-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: top;
+    line-height: 1.6;
+  }
+  .cookie-table td:first-child {
+    color: var(--cream);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .cookie-table tr:last-child td { border-bottom: none; }
+
+  .info-box {
+    background: var(--card);
+    border-left: 3px solid var(--orange);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .info-box p { margin-bottom: 0; font-size: 12.5px; }
+
+  .btn-reset {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--orange);
+    color: var(--cream);
+    border: none;
+    padding: 14px 28px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    margin: 16px 0;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-reset:hover {
+    background: var(--red);
+    transform: translateY(-1px);
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 36px 24px;
+    text-align: center;
+    background: var(--deep);
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .footer-brand em { color: var(--orange); font-style: italic; }
+  .footer-links {
+    margin-top: 14px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--orange); }
+  .footer-copy {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .topbar { padding: 14px 18px; flex-direction: column; gap: 10px; }
+    .legal-content { padding: 50px 20px 80px; }
+    .cookie-table { font-size: 11px; }
+    .cookie-table th, .cookie-table td { padding: 10px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">Italian <em>Street Pasta</em></div>
+  <a href="index.html">← Back to home</a>
+</div>
+
+<section class="legal-hero">
+  <div class="legal-eyebrow">Legal</div>
+  <h1>Cookie <em>Policy</em></h1>
+  <div class="legal-meta">Last updated · 13 May 2026</div>
+</section>
+
+<div class="legal-content">
+
+  <p>This Cookie Policy explains how <strong>Alina Mihaela Stoian</strong>, trading as <strong>Italian Street Pasta</strong>, uses cookies and similar technologies on this website. By using our site, you agree to the use of cookies in accordance with this policy, where consent is required.</p>
+
+  <h2>1. What are cookies?</h2>
+  <p>Cookies are small text files placed on your device (computer, tablet, or phone) when you visit a website. They allow the website to recognise your device and remember things like your preferences. Cookies are widely used to make websites work, work more efficiently, and provide information to website owners.</p>
+
+  <h2>2. Categories of cookies we use</h2>
+
+  <p>Under the UK GDPR and PECR, cookies fall into two main categories:</p>
+  <ul>
+    <li><strong>Strictly necessary cookies</strong> — required for the website to function. No consent is needed.</li>
+    <li><strong>Non-essential cookies</strong> — used for analytics, preferences, or marketing. These require your consent.</li>
+  </ul>
+
+  <h2>3. Cookies on this website</h2>
+
+  <p>We aim to keep our use of cookies minimal. The table below lists the cookies and similar technologies that may be used on this website:</p>
+
+  <table class="cookie-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Purpose</th>
+        <th>Type</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>cookie_consent</td>
+        <td>Stores your cookie preferences so we don't ask again on every visit.</td>
+        <td>Strictly necessary</td>
+        <td>12 months</td>
+      </tr>
+      <tr>
+        <td>Google Fonts</td>
+        <td>Loads our display fonts (Cormorant Garamond, Montserrat) from Google's CDN. Google may receive your IP address.</td>
+        <td>Functional</td>
+        <td>Session</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <p>We do <strong>not</strong> use marketing or advertising cookies, Facebook Pixel, Google Analytics, or any cross-site tracking on this website.</p>
+  </div>
+
+  <h2>4. Third-party services</h2>
+  <p>This site loads font files from Google Fonts (fonts.googleapis.com). When you visit our site, your browser may share your IP address with Google in order to deliver these fonts. Google's privacy practices are governed by their own privacy policy, available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+  <h2>5. How to manage cookies</h2>
+  <p>You have full control over the cookies we use on our website. You can:</p>
+  <ul>
+    <li><strong>Use our cookie banner</strong> — when you first visited our site, you were asked to accept or reject non-essential cookies. You can change your choice at any time by clicking the button below.</li>
+    <li><strong>Use your browser settings</strong> — most browsers allow you to view, manage, and delete cookies. Visit <a href="https://www.aboutcookies.org" target="_blank" rel="noopener">aboutcookies.org</a> for detailed instructions for each browser.</li>
+    <li><strong>Use "Do Not Track"</strong> — most browsers offer this setting. We respect this signal where technically feasible.</li>
+  </ul>
+
+  <a href="javascript:void(0)" onclick="resetCookieConsent()" class="btn-reset">
+    Reset cookie preferences
+  </a>
+
+  <p style="font-size:11.5px;color:var(--muted);margin-top:-8px">Clicking this will clear your preferences and show the cookie banner again on your next page load.</p>
+
+  <h2>6. What happens if you refuse cookies?</h2>
+  <p>If you refuse non-essential cookies, the website will still function normally. Strictly necessary cookies (like the one that stores your preference choice itself) will still be set, as these are required for the site to work correctly.</p>
+
+  <h2>7. Changes to this Cookie Policy</h2>
+  <p>We may update this Cookie Policy from time to time to reflect changes in our cookie use or legal requirements. The "Last updated" date at the top of this page indicates when it was most recently revised.</p>
+
+  <h2>8. Contact us</h2>
+  <p>If you have any questions about our use of cookies, please contact:</p>
+  <ul>
+    <li>Email: <a href="mailto:italianstreetpasta50@gmail.com">italianstreetpasta50@gmail.com</a></li>
+    <li>Phone: <a href="tel:+447404977969">+44 7404 977969</a></li>
+  </ul>
+  <p>For more information about your rights regarding cookies and online privacy, you can also contact the UK Information Commissioner's Office at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</p>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Italian <em>Italian Street Pasta </em></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="italian_street_pasta_menu.html">Menu</a>
+    <a href="allergens-nutrition.html">Allergens</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="cookie-policy.html">Cookies</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <div class="footer-copy">© 2026 Italian Street Pasta · Alina Mihaela Stoian</div>
+</footer>
+
+<script>
+function resetCookieConsent() {
+  try {
+    localStorage.removeItem('isp_cookie_consent');
+    localStorage.removeItem('isp_cookie_consent_date');
+  } catch (e) {}
+  alert('Cookie preferences have been reset. The banner will appear again on your next visit.');
+}
+</script>
+
+</body>
+</html>

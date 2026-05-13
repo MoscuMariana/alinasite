@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Italian Street Pasta</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --deep: #111111;
+    --card: #161616;
+    --border: #2a2a2a;
+    --red: #c0392b;
+    --orange: #e05a1e;
+    --gold: #c9a96e;
+    --cream: #f5efe6;
+    --text: #d4ccc4;
+    --muted: #7a7068;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+  }
+  /* TOP BAR */
+  .topbar {
+    padding: 18px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--deep);
+  }
+  .topbar a {
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .topbar a:hover { color: var(--cream); }
+  .topbar-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--cream);
+    letter-spacing: 2px;
+  }
+  .topbar-brand em { color: var(--orange); font-style: italic; }
+  /* HERO */
+  .legal-hero {
+    text-align: center;
+    padding: 90px 24px 50px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .legal-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(224,90,30,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .legal-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .legal-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 6vw, 64px);
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+  }
+  .legal-hero h1 em { font-style: italic; color: var(--orange); }
+  .legal-meta {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  /* CONTENT */
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 70px 24px 100px;
+  }
+  .legal-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--cream);
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: 0.3px;
+  }
+  .legal-content h2:first-of-type { margin-top: 0; }
+  .legal-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--gold);
+    margin: 32px 0 12px;
+  }
+  .legal-content p {
+    font-size: 13.5px;
+    color: var(--text);
+    line-height: 1.85;
+    margin-bottom: 16px;
+    letter-spacing: 0.2px;
+  }
+  .legal-content ul {
+    margin: 0 0 20px 24px;
+    color: var(--text);
+  }
+  .legal-content li {
+    font-size: 13.5px;
+    line-height: 1.85;
+    margin-bottom: 8px;
+    letter-spacing: 0.2px;
+  }
+  .legal-content li::marker { color: var(--orange); }
+  .legal-content a {
+    color: var(--orange);
+    text-decoration: underline;
+    text-decoration-color: rgba(224,90,30,0.4);
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  .legal-content a:hover { color: var(--cream); }
+  .legal-content strong { color: var(--cream); font-weight: 600; }
+  .info-box {
+    background: var(--card);
+    border-left: 3px solid var(--orange);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .info-box p { margin-bottom: 0; font-size: 12.5px; }
+  .info-box strong { color: var(--orange); }
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 36px 24px;
+    text-align: center;
+    background: var(--deep);
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .footer-brand em { color: var(--orange); font-style: italic; }
+  .footer-links {
+    margin-top: 14px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--orange); }
+  .footer-copy {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+  @media (max-width: 600px) {
+    .topbar { padding: 14px 18px; flex-direction: column; gap: 10px; }
+    .legal-content { padding: 50px 20px 80px; }
+    .legal-content h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">Italian <em>Street Pasta
+
+  </em></div>
+  <a href="index.html">← Back to home</a>
+</div>
+
+<section class="legal-hero">
+  <div class="legal-eyebrow">Legal</div>
+  <h1>Privacy <em>Policy</em></h1>
+  <div class="legal-meta">Last updated · 13 May 2026</div>
+</section>
+
+<div class="legal-content">
+
+  <p>This Privacy Policy explains how <strong>Alina Mihaela Stoian</strong>, trading as <strong>Italian Street Pasta</strong> ("we", "us", "our") collects, uses, and protects information about you when you visit this website or interact with our business. We are committed to protecting your privacy and complying with the UK General Data Protection Regulation (UK GDPR), the Data Protection Act 2018, and the Privacy and Electronic Communications Regulations (PECR).</p>
+
+  <div class="info-box">
+    <p><strong>Data Controller:</strong> Alina Mihaela Stoian (sole trader), trading as Italian Street Pasta. Address: Luckyn Ln, Basildon SS14 3AX, United Kingdom. Email: italianstreetpasta50@gmail.com — Phone: +44 7404 977969.</p>
+  </div>
+
+  <h2>1. What information we collect</h2>
+  <p>We collect only the minimum information necessary to operate our business and serve you. Specifically:</p>
+  <ul>
+    <li><strong>Contact information</strong> — when you call, text, or email us to place an order, ask a question, or provide feedback, we collect your name, phone number, and/or email address.</li>
+    <li><strong>Order details</strong> — what you ordered, when, and any dietary requirements or allergen requests you share with us.</li>
+    <li><strong>Technical information</strong> — when you visit our website, we may automatically receive limited technical data (IP address, browser type, pages viewed, time spent on the site) through standard web server logs and analytics tools.</li>
+  </ul>
+  <p>We do <strong>not</strong> collect payment card details on this website. All payments are processed in person at our food truck or through third-party platforms.</p>
+
+  <h2>2. How we use your information</h2>
+  <p>We use the information we collect for the following purposes, each with a lawful basis under UK GDPR:</p>
+  <ul>
+    <li><strong>To fulfil your order</strong> — lawful basis: performance of a contract.</li>
+    <li><strong>To respond to your enquiries</strong> — lawful basis: legitimate interest in providing customer service.</li>
+    <li><strong>To improve our menu, service, and website</strong> — lawful basis: legitimate interest in running our business effectively.</li>
+    <li><strong>To comply with legal obligations</strong> — for example, food safety records or tax records — lawful basis: legal obligation.</li>
+  </ul>
+  <p>We do not use your information for marketing purposes unless you have explicitly consented.</p>
+
+  <h2>3. Who we share your information with</h2>
+  <p>We do not sell or rent your personal information to anyone. We only share it with third parties in the following limited circumstances:</p>
+  <ul>
+    <li>Service providers who help us operate our business (for example, our website hosting provider, email provider). These parties are bound by confidentiality obligations.</li>
+    <li>Authorities, regulators, or law enforcement when required by law (for example, Basildon Council environmental health, HMRC, or the Food Standards Agency).</li>
+  </ul>
+
+  <h2>4. How long we keep your information</h2>
+  <p>We keep your information only for as long as necessary for the purposes described above, or as required by law:</p>
+  <ul>
+    <li>Order and contact records — typically up to 12 months unless a complaint or legal matter requires longer retention.</li>
+    <li>Financial and tax records — at least 6 years, as required by HMRC.</li>
+    <li>Website analytics data — typically 14–26 months.</li>
+  </ul>
+
+  <h2>5. Your rights under UK GDPR</h2>
+  <p>You have the following rights regarding your personal information:</p>
+  <ul>
+    <li><strong>Right to be informed</strong> — about how your data is used (this policy).</li>
+    <li><strong>Right of access</strong> — request a copy of the personal data we hold about you.</li>
+    <li><strong>Right to rectification</strong> — ask us to correct inaccurate information.</li>
+    <li><strong>Right to erasure</strong> — ask us to delete your data, subject to legal limits.</li>
+    <li><strong>Right to restrict processing</strong> — ask us to limit how we use your data.</li>
+    <li><strong>Right to data portability</strong> — receive your data in a portable format.</li>
+    <li><strong>Right to object</strong> — to certain types of processing (e.g. direct marketing).</li>
+    <li><strong>Right to withdraw consent</strong> — at any time, where consent is the lawful basis.</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:italianstreetpasta50@gmail.com">italianstreetpasta50@gmail.com</a>. We will respond within one calendar month.</p>
+
+  <h2>6. Cookies and tracking</h2>
+  <p>Our website uses cookies and similar technologies. For full details about which cookies we use, why, and how you can control them, please see our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+
+  <h2>7. Security of your information</h2>
+  <p>We take reasonable technical and organisational measures to protect your personal information from unauthorised access, loss, or misuse. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+  <h2>8. Children's privacy</h2>
+  <p>Our website is not directed at children under 13. We do not knowingly collect personal information from children. If you believe we have collected such information, please contact us and we will promptly delete it.</p>
+
+  <h2>9. Changes to this Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. The "Last updated" date at the top of this page indicates when it was most recently revised. We encourage you to review this policy periodically.</p>
+
+  <h2>10. How to make a complaint</h2>
+  <p>If you have any concerns about how we handle your personal information, please contact us first at <a href="mailto:italianstreetpasta50@gmail.com">italianstreetpasta50@gmail.com</a>. If you are not satisfied with our response, you have the right to lodge a complaint with the UK Information Commissioner's Office (ICO):</p>
+  <div class="info-box">
+    <p><strong>Information Commissioner's Office</strong><br>
+    Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF<br>
+    Helpline: 0303 123 1113 — Website: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a></p>
+  </div>
+
+  <h2>11. Contact us</h2>
+  <p>If you have any questions about this Privacy Policy or how we handle your personal information, please get in touch:</p>
+  <ul>
+    <li>Email: <a href="mailto:italianstreetpasta50@gmail.com">italianstreetpasta50@gmail.com</a></li>
+    <li>Phone: <a href="tel:+447404977969">+44 7404 977969</a></li>
+    <li>Address: Luckyn Ln, Basildon SS14 3AX, United Kingdom</li>
+  </ul>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Italian <em>Street Pasta</em></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="italian_street_pasta_menu.html">Menu</a>
+    <a href="allergens-nutrition.html">Allergens</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="cookie-policy.html">Cookies</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <div class="footer-copy">© 2026 Italian Street Pasta · Alina Mihaela Stoian</div>
+</footer>
+
+</body>
+</html>

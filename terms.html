@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use — Italian Street Pasta</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --deep: #111111;
+    --card: #161616;
+    --border: #2a2a2a;
+    --red: #c0392b;
+    --orange: #e05a1e;
+    --gold: #c9a96e;
+    --cream: #f5efe6;
+    --text: #d4ccc4;
+    --muted: #7a7068;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+  }
+  .topbar {
+    padding: 18px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--deep);
+  }
+  .topbar a {
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .topbar a:hover { color: var(--cream); }
+  .topbar-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--cream);
+    letter-spacing: 2px;
+  }
+  .topbar-brand em { color: var(--orange); font-style: italic; }
+  .legal-hero {
+    text-align: center;
+    padding: 90px 24px 50px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .legal-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(224,90,30,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .legal-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .legal-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 6vw, 64px);
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+  }
+  .legal-hero h1 em { font-style: italic; color: var(--orange); }
+  .legal-meta {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 70px 24px 100px;
+  }
+  .legal-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--cream);
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .legal-content h2:first-of-type { margin-top: 0; }
+  .legal-content p {
+    font-size: 13.5px;
+    color: var(--text);
+    line-height: 1.85;
+    margin-bottom: 16px;
+    letter-spacing: 0.2px;
+  }
+  .legal-content ul {
+    margin: 0 0 20px 24px;
+    color: var(--text);
+  }
+  .legal-content li {
+    font-size: 13.5px;
+    line-height: 1.85;
+    margin-bottom: 8px;
+  }
+  .legal-content li::marker { color: var(--orange); }
+  .legal-content a {
+    color: var(--orange);
+    text-decoration: underline;
+    text-decoration-color: rgba(224,90,30,0.4);
+    text-underline-offset: 3px;
+  }
+  .legal-content a:hover { color: var(--cream); }
+  .legal-content strong { color: var(--cream); font-weight: 600; }
+
+  .info-box {
+    background: var(--card);
+    border-left: 3px solid var(--orange);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .info-box p { margin-bottom: 0; font-size: 12.5px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 36px 24px;
+    text-align: center;
+    background: var(--deep);
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+  .footer-brand em { color: var(--orange); font-style: italic; }
+  .footer-links {
+    margin-top: 14px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: var(--orange); }
+  .footer-copy {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .topbar { padding: 14px 18px; flex-direction: column; gap: 10px; }
+    .legal-content { padding: 50px 20px 80px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">Italian <em>Street</em></div>
+  <a href="index.html">← Back to home</a>
+</div>
+
+<section class="legal-hero">
+  <div class="legal-eyebrow">Legal</div>
+  <h1>Terms of <em>Use</em></h1>
+  <div class="legal-meta">Last updated · 13 May 2026</div>
+</section>
+
+<div class="legal-content">
+
+  <p>These Terms of Use govern your use of the Italian Street Pasta website. By accessing or using this site, you agree to be bound by these terms. If you do not agree, please do not use the site.</p>
+
+  <div class="info-box">
+    <p><strong>About us:</strong> This website is operated by Alina Mihaela Stoian, a sole trader, trading as Italian Street Pasta. Address: Luckyn Ln, Basildon SS14 3AX, United Kingdom.</p>
+  </div>
+
+  <h2>1. Use of the website</h2>
+  <p>This website is provided for informational purposes — to help you learn about our menu, dishes, contact details, and location. You may use the site freely for personal, non-commercial purposes.</p>
+  <p>You agree not to:</p>
+  <ul>
+    <li>Use the site in any way that breaches UK law or any other applicable law or regulation.</li>
+    <li>Use the site to transmit unsolicited communications, malicious code, or any harmful material.</li>
+    <li>Attempt to gain unauthorised access to the site or any associated systems.</li>
+    <li>Copy, reproduce, or redistribute any content from this site without permission.</li>
+  </ul>
+
+  <h2>2. Menu, prices, and availability</h2>
+  <p>The menu, prices, and other information on this website are provided for general information only and may change without prior notice. We make every effort to keep this information accurate, but:</p>
+  <ul>
+    <li>Prices shown are in pounds sterling (GBP).</li>
+    <li>Item availability depends on daily stock and may vary.</li>
+    <li>Photographs of dishes are for illustration; actual servings may differ slightly.</li>
+    <li>All orders are subject to acceptance at the point of sale.</li>
+  </ul>
+  <p>This website does not facilitate online ordering or payments. To place an order, please call us, email us, or visit us in person.</p>
+
+  <h2>3. Food allergens and dietary information</h2>
+  <p>We list the main allergens for each dish on our <a href="italian_street_pasta_menu.html">menu page</a>. However, all our food is prepared in a kitchen where the 14 major allergens (including gluten, milk, eggs, fish, soya, celery, etc.) are handled. We cannot guarantee that any item is 100% free from any specific allergen due to the risk of cross-contamination.</p>
+  <p><strong>If you have a serious food allergy or intolerance, please tell us before ordering</strong> so we can advise you on the safest options. We take allergen requests very seriously, but the final decision to consume any item rests with you.</p>
+
+  <h2>4. Intellectual property</h2>
+  <p>All content on this website — including the logo, brand name "Italian Street Pasta", text, photographs, design, and layout — is owned by or licensed to Alina Mihaela Stoian and is protected by UK and international copyright law. You may not reproduce, modify, or redistribute any content without our written permission.</p>
+
+  <h2>5. Links to other websites</h2>
+  <p>This website may contain links to third-party websites (for example, Google Fonts, social media, or mapping services). We are not responsible for the content, practices, or policies of any third-party site. Following such links is at your own risk.</p>
+
+  <h2>6. Disclaimer and limitation of liability</h2>
+  <p>This website is provided on an "as is" basis. While we make every reasonable effort to ensure the information is accurate, complete, and up to date, we do not guarantee this. Use of this website is at your own risk.</p>
+  <p>To the fullest extent permitted by law, we exclude all liability for any loss or damage arising from your use of this website, including but not limited to indirect or consequential losses. Nothing in these terms limits or excludes our liability for:</p>
+  <ul>
+    <li>Death or personal injury caused by our negligence;</li>
+    <li>Fraud or fraudulent misrepresentation;</li>
+    <li>Any liability that cannot be limited or excluded under UK law.</li>
+  </ul>
+  <p>Your statutory rights as a consumer under the Consumer Rights Act 2015 are not affected.</p>
+
+  <h2>7. Privacy and cookies</h2>
+  <p>Your use of this website is also governed by our <a href="privacy-policy.html">Privacy Policy</a> and <a href="cookie-policy.html">Cookie Policy</a>, which form part of these terms.</p>
+
+  <h2>8. Changes to these terms</h2>
+  <p>We may update these Terms of Use from time to time. The "Last updated" date at the top of this page shows when the terms were last revised. Your continued use of the site after changes constitutes acceptance of the updated terms.</p>
+
+  <h2>9. Governing law and jurisdiction</h2>
+  <p>These Terms of Use, and any dispute arising from your use of this website, are governed by the laws of England and Wales. Any dispute will be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+  <h2>10. Contact us</h2>
+  <p>If you have any questions about these terms, please contact:</p>
+  <ul>
+    <li>Email: <a href="mailto:italianstreetpasta50@gmail.com">italianstreetpasta50@gmail.com</a></li>
+    <li>Phone: <a href="tel:+447404977969">+44 7404 977969</a></li>
+    <li>Address: Luckyn Ln, Basildon SS14 3AX, United Kingdom</li>
+  </ul>
+
+</div>
+
+<footer>
+  <div class="footer-brand">Italian <em>Street</em></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="italian_street_pasta_menu.html">Menu</a>
+    <a href="allergens-nutrition.html">Allergens</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="cookie-policy.html">Cookies</a>
+    <a href="terms.html">Terms</a>
+  </div>
+  <div class="footer-copy">© 2026 Italian Street Pasta · Alina Mihaela Stoian</div>
+</footer>
+
+</body>
+</html>
