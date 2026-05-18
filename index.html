@@ -12,58 +12,7 @@
 </a>
   
 <style>
-/* Stiluri forțate pentru a evita conflictele din site */
-.wp-fix-btn {
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  width: 50px !important;
-  height: 50px !important;
-  background-color: #25D366 !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4) !important;
-  z-index: 2147483647 !important; /* Cel mai mare z-index posibil */
-  transition: transform 0.2s ease, background-color 0.2s ease !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-  text-decoration: none !important;
-}
 
-/* Stiluri forțate pentru SVG (pentru a nu se tăia) */
-.wp-fix-btn svg {
-  width: 30px !important; /* Dimensiunea iconiței în interiorul cercului */
-  height: 30px !important;
-  fill: white !important; /* Culoarea iconiței */
-  display: block !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Efect la atingere/hover */
-.wp-fix-btn:hover {
-  background-color: #128C7E !important;
-  transform: scale(1.1) !important;
-}
-
-/* Adaptare pentru mobil (să fie un pic mai sus/mic) */
-@media (max-width: 768px) {
-  .wp-fix-btn {
-    bottom: 15px !important;
-    right: 15px !important;
-    width: 45px !important;
-    height: 45px !important;
-  }
-  .wp-fix-btn svg {
-    width: 26px !important;
-    height: 26px !important;
-  }
-
-
-}
   :root {
     --black: #0a0a0a;
     --deep: #111111;
@@ -795,6 +744,62 @@
     .contact-grid { grid-template-columns: 1fr 1fr; }
     .hero h1 { letter-spacing: -1px; }
   }
+
+
+
+
+  /* Stiluri forțate pentru a evita conflictele din site */
+.wp-fix-btn {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: #25D366 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4) !important;
+  z-index: 2147483647 !important; /* Cel mai mare z-index posibil */
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+
+/* Stiluri forțate pentru SVG (pentru a nu se tăia) */
+.wp-fix-btn svg {
+  width: 30px !important; /* Dimensiunea iconiței în interiorul cercului */
+  height: 30px !important;
+  fill: white !important; /* Culoarea iconiței */
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Efect la atingere/hover */
+.wp-fix-btn:hover {
+  background-color: #128C7E !important;
+  transform: scale(1.1) !important;
+}
+
+/* Adaptare pentru mobil (să fie un pic mai sus/mic) */
+@media (max-width: 768px) {
+  .wp-fix-btn {
+    bottom: 15px !important;
+    right: 15px !important;
+    width: 45px !important;
+    height: 45px !important;
+  }
+  .wp-fix-btn svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+
+}
 </style>
 </head>
 <body>
