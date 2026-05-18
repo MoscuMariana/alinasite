@@ -198,6 +198,89 @@
   .leg-icon.sulphite { background: #9b59b6; }
   .leg-icon.soya     { background: #f1c40f; color: #0a0a0a; }
 
+  /* 14 ALLERGENS GRID */
+  .fourteen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .al14 {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px 20px;
+    position: relative;
+    opacity: 0.55;
+    transition: all 0.3s;
+  }
+  .al14.used {
+    opacity: 1;
+    border-color: rgba(224,90,30,0.4);
+    background: linear-gradient(180deg, rgba(224,90,30,0.06) 0%, var(--card) 100%);
+  }
+  .al14.used::after {
+    content: '';
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    box-shadow: 0 0 0 3px rgba(224,90,30,0.15);
+  }
+  .al14-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .al14.used .al14-num { color: var(--orange); }
+  .al14-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--cream);
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  .al14-sub {
+    font-size: 10.5px;
+    color: var(--muted);
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+  }
+
+  .fourteen-legend {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--text);
+    letter-spacing: 0.5px;
+  }
+  .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dot-used {
+    background: var(--orange);
+    box-shadow: 0 0 0 3px rgba(224,90,30,0.15);
+  }
+  .dot-not {
+    background: transparent;
+    border: 1px solid var(--border);
+  }
+
   /* DISH TABLE */
   .dish-table {
     width: 100%;
@@ -635,7 +718,7 @@
 <body>
 
 <div class="topbar">
-  <div class="topbar-brand">Italian <em>Street Pasta</em></div>
+  <div class="topbar-brand">Italian <em>Street</em></div>
   <a href="index.html">← Back to home</a>
 </div>
 
@@ -657,10 +740,40 @@
 
 <section class="main">
   <div class="container">
+
+    <!-- THE 14 UK MAJOR ALLERGENS -->
     <div class="section-header">
+      <div class="eyebrow">UK Food Law</div>
+      <h2>The <em>14 major</em> allergens</h2>
+      <p>Under UK Food Information Regulations 2014 (Natasha's Law), these are the 14 allergens that all food businesses must declare. Our kitchen handles all of them — see below which ones appear in our dishes.</p>
+    </div>
+
+    <div class="fourteen-grid">
+      <div class="al14"><div class="al14-num">01</div><div class="al14-name">Cereals containing gluten</div><div class="al14-sub">Wheat, rye, barley, oats</div></div>
+      <div class="al14"><div class="al14-num">02</div><div class="al14-name">Crustaceans</div><div class="al14-sub">Prawns, crab, lobster</div></div>
+      <div class="al14 used"><div class="al14-num">03</div><div class="al14-name">Eggs</div><div class="al14-sub">Whole, yolks, whites</div></div>
+      <div class="al14 used"><div class="al14-num">04</div><div class="al14-name">Fish</div><div class="al14-sub">Salmon, anchovies, tuna</div></div>
+      <div class="al14"><div class="al14-num">05</div><div class="al14-name">Peanuts</div><div class="al14-sub">Groundnuts, peanut oil</div></div>
+      <div class="al14"><div class="al14-num">06</div><div class="al14-name">Soya / Soybeans</div><div class="al14-sub">Tofu, soy sauce</div></div>
+      <div class="al14 used"><div class="al14-num">07</div><div class="al14-name">Milk</div><div class="al14-sub">Including lactose, cheese, butter</div></div>
+      <div class="al14"><div class="al14-num">08</div><div class="al14-name">Tree nuts</div><div class="al14-sub">Almonds, walnuts, cashews, pistachios</div></div>
+      <div class="al14 used"><div class="al14-num">09</div><div class="al14-name">Celery</div><div class="al14-sub">Stalks, leaves, celeriac</div></div>
+      <div class="al14"><div class="al14-num">10</div><div class="al14-name">Mustard</div><div class="al14-sub">Seeds, paste, sauce</div></div>
+      <div class="al14"><div class="al14-num">11</div><div class="al14-name">Sesame seeds</div><div class="al14-sub">Tahini, sesame oil</div></div>
+      <div class="al14 used"><div class="al14-num">12</div><div class="al14-name">Sulphur dioxide / Sulphites</div><div class="al14-sub">In wine, dried fruit, some sauces</div></div>
+      <div class="al14"><div class="al14-num">13</div><div class="al14-name">Lupin</div><div class="al14-sub">Flour, seeds</div></div>
+      <div class="al14"><div class="al14-num">14</div><div class="al14-name">Molluscs</div><div class="al14-sub">Mussels, squid, oysters, snails</div></div>
+    </div>
+
+    <div class="fourteen-legend">
+      <span class="legend-item"><span class="dot dot-used"></span>Present in some of our dishes</span>
+      <span class="legend-item"><span class="dot dot-not"></span>Not used in our recipes</span>
+    </div>
+
+    <div class="section-header" style="margin-top:80px">
       <div class="eyebrow">Allergen Reference</div>
       <h2>Allergens per <em>dish</em></h2>
-      <p>Every dish on our menu, with its allergens, calories, and macronutrients per serving.</p>
+      <p>Every dish on our menu, with its allergens, calories, and macronutrients per serving. Below are the 6 allergens that actually appear in our recipes.</p>
     </div>
 
     <div class="allergen-legend">
@@ -762,9 +875,7 @@
 </section>
 
 <footer>
-  <div class="footer-brand">Italian <em>Street Pasta
-    
-  </em></div>
+  <div class="footer-brand">Italian <em>Street</em></div>
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="italian_street_pasta_menu.html">Menu</a>
