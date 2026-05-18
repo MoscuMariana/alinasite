@@ -16,37 +16,38 @@
   
   
   <style>
-
-    /* Stilul pentru butonul plutitor */
-.whatsapp-btn {
+.whatsapp-mini-btn {
   position: fixed;
-  bottom: 20px; /* Distanța de marginea de jos */
-  right: 20px;  /* Distanța de marginea din dreapta */
-  background-color: #25D366; /* Verdele oficial WhatsApp */
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
   color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 50px;
+  width: 50px;    /* Lățime fixă pentru cerc */
+  height: 50px;   /* Înălțime fixă pentru cerc */
+  border-radius: 50%; /* Îl face perfect rotund */
   display: flex;
   align-items: center;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999; /* Se asigură că butonul stă deasupra altor elemente */
-  transition: background-color 0.3s, transform 0.3s;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-/* Efect la trecerea cu mouse-ul (hover) */
-.whatsapp-btn:hover {
+/* Efect la atingere/hover */
+.whatsapp-mini-btn:hover {
   background-color: #128C7E;
-  transform: scale(1.05);
+  transform: scale(1.1); /* Se mărește subtil când pui mouse-ul */
   color: white;
 }
 
-/* Spațiu între iconiță și text */
-.whatsapp-btn svg {
-  margin-right: 8px;
+/* Ajustare pentru ecrane de telefon (să fie un pic mai sus sau mai mic dacă încurcă) */
+@media (max-width: 768px) {
+  .whatsapp-mini-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
 }
   :root {
     --black: #0a0a0a;
