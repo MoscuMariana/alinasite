@@ -294,9 +294,13 @@
   .tag-fish  { background: rgba(52,152,219,0.12); color: #60a8e0; border: 1px solid rgba(52,152,219,0.25); }
   .tag-spicy { background: rgba(224,90,30,0.12);  color: var(--orange); border: 1px solid rgba(224,90,30,0.25); }
 
-  /* Mobile - stack vertically */
+  /* Mobile & tablet portrait - stack vertically (single column) */
+  @media (max-width: 900px) {
+    .menu-grid { grid-template-columns: 1fr !important; }
+    .deal-grid { grid-template-columns: 1fr !important; }
+    .drinks-grid { grid-template-columns: 1fr !important; }
+  }
   @media (max-width: 480px) {
-    .menu-grid { grid-template-columns: 1fr; }
     .menu-card { padding: 18px; gap: 16px; }
     .card-image { width: 80px; height: 80px; }
     .card-name { font-size: 20px; }
@@ -691,17 +695,17 @@
     <div class="deal-card">
       <div class="deal-name">Pollo Milanese with Chips</div>
       <div class="deal-desc">Crispy breaded marinated chicken breast, golden-fried, served with hand-cut chips.</div>
-      <div class="deal-includes">Includes · Drink</div>
+      <div class="deal-includes">Drink · Included</div>
     </div>
     <div class="deal-card">
       <div class="deal-name">Pollo Milanese with Pasta</div>
       <div class="deal-desc">Crispy breaded chicken breast alongside a hearty portion of tomato pasta.</div>
-      <div class="deal-includes">Includes · Drink</div>
+      <div class="deal-includes">Drink · Included</div>
     </div>
     <div class="deal-card">
       <div class="deal-name">Meatballs with Chips</div>
       <div class="deal-desc">Beef meatballs in rich tomato sauce, served with golden hand-cut chips.</div>
-      <div class="deal-includes">Includes · Drink</div>
+      <div class="deal-includes">Drink · Included</div>
     </div>
   </div>
 </section>
@@ -711,12 +715,16 @@
   <div class="section-title">Drinks</div>
   <div class="drinks-grid">
     <div class="drink-item">
-      <div><div class="drink-name">Fanta</div><div class="drink-size">330 ml</div></div>
-      <div class="drink-price">1.50£</div>
+      <div><div class="drink-name">Coca-Cola</div><div class="drink-size">330 ml</div></div>
+      <div class="drink-price">2£</div>
     </div>
     <div class="drink-item">
-      <div><div class="drink-name">Coca-Cola</div><div class="drink-size">330 ml</div></div>
-      <div class="drink-price">1.50£</div>
+      <div><div class="drink-name">Coca-Cola Zero</div><div class="drink-size">330 ml</div></div>
+      <div class="drink-price">2£</div>
+    </div>
+    <div class="drink-item">
+      <div><div class="drink-name">Fanta</div><div class="drink-size">330 ml</div></div>
+      <div class="drink-price">2£</div>
     </div>
     <div class="drink-item">
       <div><div class="drink-name">Still Water</div><div class="drink-size">500 ml</div></div>
