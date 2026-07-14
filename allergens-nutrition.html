@@ -197,6 +197,7 @@
   .leg-icon.celery   { background: #6b8e23; }
   .leg-icon.sulphite { background: #9b59b6; }
   .leg-icon.soya     { background: #f1c40f; color: #0a0a0a; }
+  .leg-icon.crustacean { background: #2f8f7f; }
 
   /* 14 ALLERGENS GRID */
   .fourteen-grid {
@@ -364,6 +365,7 @@
   .ap-celery   { background: rgba(107,142,35,0.18); border: 1px solid rgba(107,142,35,0.4); color: #a0c970; }
   .ap-sulphite { background: rgba(155,89,182,0.18); border: 1px solid rgba(155,89,182,0.4); color: #b886d4; }
   .ap-soya     { background: rgba(241,196,15,0.18); border: 1px solid rgba(241,196,15,0.4); color: #f1c40f; }
+  .ap-crustacean { background: rgba(47,143,127,0.18); border: 1px solid rgba(47,143,127,0.4); color: #4fbfa8; }
 
   /* Mobile: collapse table into cards */
   @media (max-width: 768px) {
@@ -750,7 +752,7 @@
 
     <div class="fourteen-grid">
       <div class="al14 used"><div class="al14-num">01</div><div class="al14-name">Cereals containing gluten</div><div class="al14-sub">Wheat, rye, barley, oats</div></div>
-      <div class="al14"><div class="al14-num">02</div><div class="al14-name">Crustaceans</div><div class="al14-sub">Prawns, crab, lobster</div></div>
+      <div class="al14 used"><div class="al14-num">02</div><div class="al14-name">Crustaceans</div><div class="al14-sub">Prawns, crab, lobster</div></div>
       <div class="al14 used"><div class="al14-num">03</div><div class="al14-name">Eggs</div><div class="al14-sub">Whole, yolks, whites</div></div>
       <div class="al14 used"><div class="al14-num">04</div><div class="al14-name">Fish</div><div class="al14-sub">Salmon, anchovies, tuna</div></div>
       <div class="al14"><div class="al14-num">05</div><div class="al14-name">Peanuts</div><div class="al14-sub">Groundnuts, peanut oil</div></div>
@@ -773,7 +775,7 @@
     <div class="section-header" style="margin-top:80px">
       <div class="eyebrow">Allergen Reference</div>
       <h2>Allergens per <em>dish</em></h2>
-      <p>Every dish on our menu, with its allergens, calories, and macronutrients per serving. Below are the 6 allergens that actually appear in our recipes.</p>
+      <p>Every dish on our menu, with its allergens, calories, and macronutrients per serving. Below are the 7 allergens that actually appear in our recipes.</p>
     </div>
 
     <div class="allergen-legend">
@@ -781,7 +783,8 @@
       <span class="leg-item"><span class="leg-icon milk">M</span>Milk / Lactose</span>
       <span class="leg-item"><span class="leg-icon eggs">E</span>Eggs</span>
       <span class="leg-item"><span class="leg-icon fish">F</span>Fish</span>
-      <span class="leg-item"><span class="leg-icon celery">C</span>Celery</span>
+      <span class="leg-item"><span class="leg-icon crustacean">C</span>Crustaceans</span>
+      <span class="leg-item"><span class="leg-icon celery">Ce</span>Celery</span>
       <span class="leg-item"><span class="leg-icon sulphite">S</span>Sulphites</span>
     </div>
 
@@ -899,9 +902,9 @@ const DISHES = [
   { id:'amatriciana', name:'Amatriciana',         desc:'Pancetta, onion, tomato, chilli, parmesan, rigatoni', kcal:640, protein:28, carbs:74, fat:24, allergens:['gluten','milk'] },
   { id:'mushrooms',   name:'Wild Mushrooms (V)',  desc:'Mushrooms, butter, truffle oil, parmesan, paccheri', kcal:580, protein:18, carbs:68, fat:26, allergens:['gluten','milk','sulphite'] },
   { id:'bolognese',   name:'Bolognese',           desc:'Beef ragu, tomato sauce, parmesan, rigatoni',       kcal:700, protein:40, carbs:70, fat:26, allergens:['gluten','milk','celery','sulphite'] },
-  { id:'pollo_chips', name:'Pollo Milanese + Chips', desc:'Breaded chicken breast with chips',              kcal:920, protein:45, carbs:80, fat:42, allergens:['gluten','milk','eggs'] },
-  { id:'pollo_pasta', name:'Pollo Milanese + Pasta', desc:'Breaded chicken with tomato pasta',              kcal:1020, protein:48, carbs:120, fat:32, allergens:['gluten','milk','eggs'] },
-  { id:'mb_chips',    name:'Meatballs + Chips',   desc:'Beef meatballs in tomato sauce with chips',         kcal:880, protein:38, carbs:78, fat:40, allergens:['gluten','milk','eggs'] },
+  { id:'tuna_pasta',  name:'Pasta all Tuna',      desc:'Tuna, cherry tomatoes, garlic, tomato sauce, spaghetti', kcal:650, protein:34, carbs:78, fat:20, allergens:['gluten','fish','milk'] },
+  { id:'prawn_pasta', name:'Pasta with Prawns',   desc:'King prawns, garlic, chilli, white wine, spaghetti', kcal:630, protein:30, carbs:78, fat:18, allergens:['gluten','crustacean','milk','sulphite'] },
+  { id:'tiramisu',    name:'Tiramisu',            desc:'Mascarpone, espresso, amaretto, savoiardi, cocoa',  kcal:620, protein:11, carbs:50, fat:38, allergens:['gluten','eggs','milk','sulphite'] },
   { id:'fanta',       name:'Fanta 330ml',         desc:'Orange soda',                                       kcal:140, protein:0,  carbs:35, fat:0, allergens:[] },
   { id:'coke',        name:'Coca-Cola 330ml',     desc:'Classic cola',                                      kcal:139, protein:0,  carbs:35, fat:0, allergens:[] },
   { id:'water',       name:'Still water 500ml',   desc:'Bottled water',                                     kcal:0,   protein:0,  carbs:0,  fat:0, allergens:[] },
@@ -909,7 +912,7 @@ const DISHES = [
 ];
 
 const ALLERGEN_LABELS = {
-  gluten:'Gluten', milk:'Milk', eggs:'Eggs', fish:'Fish', celery:'Celery', sulphite:'Sulphites', soya:'Soya'
+  gluten:'Gluten', milk:'Milk', eggs:'Eggs', fish:'Fish', celery:'Celery', sulphite:'Sulphites', soya:'Soya', crustacean:'Crustaceans'
 };
 
 // === Build the dish table (allergens per dish) ===
